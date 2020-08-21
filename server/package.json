@@ -6,10 +6,11 @@
   "author": "Fernando Marques",
   "license": "ISC",
   "scripts": {
-    "start": "node index.js --production",
+    "start": "start src/views/index.html&node index.js --production",
     "development": "nodemon index.js --development"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mysql2": "^2.1.0",

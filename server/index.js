@@ -1,3 +1,3 @@
-require('./src/config/InitialConfig');
+require('./src/config/initialConfig');
 require('./src/database/index');
 require('./src/server');
