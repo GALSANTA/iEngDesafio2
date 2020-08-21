@@ -1,6 +1,7 @@
 const User = require('../models/User');
 
 const store = async (request, response) => {
+    
     const { name, email } = request.body;
 
     try {
@@ -9,9 +10,20 @@ const store = async (request, response) => {
     } catch (error) {
         console.log("ERROR: "+error);
     }
-}
+};
+
+const list = async (request, response) => {
+    
+    try {
+        const users = await User.findAll();
+        return response.status(200).send(users);
+    } catch (error) {
+        console.log("ERROR: "+error);
+    }
+};
 
 
 module.exports = {
-    store
+    store,
+    list
 }
